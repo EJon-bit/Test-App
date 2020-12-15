@@ -1,0 +1,29 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "@azure/cosmos": "^3.9.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "deepmerge": "^4.2.2",
+    "deepmerge-json": "^1.1.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-generator": "^4.2.0",
+    "jade": "^0.31.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  },
+  "author": "Vas Interns",
+  "license": "ISC"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "sql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && nodemon ./src/bin/www"
+  },
+  "author": "Vas team",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/cosmos": "^3.9.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "deepmerge": "^4.2.2",
+    "deepmerge-json": "^1.1.2",
+    "express": "^4.17.1",
+    "express-generator": "^4.2.0",
+    "jade": "^0.31.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  }
+}

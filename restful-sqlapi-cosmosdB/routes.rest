@@ -1,0 +1,47 @@
+GET http://localhost:3000/item
+
+###
+
+GET http://localhost:3000/item/d7aa924e-55c0-4ff0-9007-85521a090799
+
+###
+
+POST http://localhost:3000/item/addItem
+content-type: application/json
+
+{
+  "name": "Vas Backend Team",
+  "comment": "This tests the patch",
+  "requestType": "Attachments",
+  "source": "VAS",
+  "requestAttachments": {
+    "input": [
+      {
+        "attatchment": {
+          "link": "https://github.com/",
+          "name": "Github.com"
+        }
+      }
+    ],
+    "output": [
+      {
+        "attatchment": {
+          "name": "Youtube Rest API video",
+          "link": "https://www.youtube.com/watch?v=vjf774RKrLc&t=24s"
+        }
+      }
+    ]
+  },
+  "requestStatus": "Pending..."
+}
+
+###
+
+DELETE http://localhost:3000/item/033d48f0-a3c8-4ad6-82eb-9b06fc5543e4
+
+###
+
+PATCH http://localhost:3000/item/033d48f0-a3c8-4ad6-82eb-9b06fc5543e4
+content-type: application/json
+
+
