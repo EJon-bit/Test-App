@@ -1,0 +1,55 @@
+POST http://localhost:5100/sshSess/
+content-type: application/json
+
+{
+    "host":"172.16.245.84",
+    "username":"sogadm",
+    "password": "sogadm",
+    "command": "/home/sogadm/Interns/testscript.sh",
+    "argument": "/home/sogadm/Interns/testfile.txt"
+}
+
+###
+POST http://localhost:5100/sshSess/
+content-type: application/json
+
+{
+    "host":"172.16.245.84",
+    "username":"sogadm",
+    "password": "sogadm",
+    "command" :"/home/sogadm/Interns/testscript.sh",
+    "argument" : "/home/sogadm/Interns/testfile.txt"
+}
+
+###
+POST http://localhost:5100/sftpSess/
+content-type: application/json
+
+{
+    "host":"172.16.245.84",
+    "username":"sogadm",
+    "password": "sogadm"
+}
+
+###
+
+POST http://localhost:5100/sftpSess/putFile
+content-type: application/json
+
+{
+    "host":"172.16.245.84",
+    "username":"sogadm",
+    "password": "sogadm",
+    "destination":"/home/sogadm/Interns/sftptest.txt"
+}
+
+###
+
+POST http://localhost:5100/sftpSess/putFile
+content-type: application/json
+
+{
+    "host":"172.16.245.84",
+    "username":"sogadm",
+    "password": "sogadm"
+}

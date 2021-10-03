@@ -1,0 +1,935 @@
+@import './antdVariables.less';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(../public/AppContainerBackground.jpg);
+  background-repeat: repeat-y;
+  background-size:cover;
+  width:100vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.light-theme {
+	
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  
+    
+  	#loginBackground {
+  		height: 100vh;
+  		width: 100vw;
+  		background-image: url('../public/VasBackground.jpg');
+  		background-size: cover;
+  		background-repeat: no-repeat;
+  		.ant-card-head {
+  			background: linear-gradient(to right top, red, #ff0e01b4, #b700ffd5, #b700ff);
+  			background-clip: text;
+  			-webkit-text-fill-color: transparent;
+  			border-bottom: none;
+  			border-top-left-radius: inherit;
+  			border-top-right-radius: inherit;
+  			font-weight: 400;
+  			font-size: 18px;
+  		}
+  		#loginCard {
+  			position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+  			border-radius: 8px;
+  			border-color: transparent;
+  			background: rgba(255, 255, 255, 0.767);
+  			backdrop-filter: blur(1rem);
+  			#loginButton {
+  				background: linear-gradient(to right top, red, #b700ff);
+  				color: white;
+  				font-weight: 500;
+  				border: transparent;
+  			}
+  		}
+  	}
+  	#navLogo {
+  		margin: auto;
+  		margin-top: 5px;
+  		background-image: url('../public/VASLogoMain.png');
+  		background-size: contain;
+  		background-repeat: no-repeat;
+  		height: 70px;
+  		width: 150px;
+  	}
+  	.ant-form {
+  		label {
+  			font-size: 14px;
+  			color: #cf1010;
+  			font-weight: 500;
+  		}
+  	}
+  	.ant-form-item {
+  		.ant-input {
+  			background-color: rgba(252, 250, 250, 0.815);
+  			color: #0e0d0d;
+  			border-color: rgba(241, 8, 8, 0.938);
+  			&:hover {
+  				background-color: rgba(252, 250, 250, 0.815);
+  				color: #0e0d0d;
+  				border-color: rgba(241, 8, 8, 0.938);
+  			}
+  		}
+  		.ant-calendar-picker-input {
+  			background-color: rgba(252, 250, 250, 0.815);
+  			color: #0e0d0d;
+  			border-color: rgba(241, 8, 8, 0.938);
+  		}
+  		.ant-select {
+  			&:not(.ant-select-disabled) {
+  				&:not(.ant-select-customize-input) {
+  					.ant-select-selector {
+  						background-color: rgba(248, 242, 242, 0.815);
+  						color: #f10909;
+  					}
+  				}
+  			}
+  		}
+  		.ant-picker {
+  			width: 100%;
+  			background-color: rgba(24, 12, 12, 0.815);
+  			color: blanchedalmond;
+  			border-color: rgba(107, 11, 11, 0.938);
+  		}
+  		.ant-picker-input {
+  			>input {
+  				color: blanchedalmond;
+  			}
+  		}
+  	}
+  	#appHead {
+  		position: fixed;
+  		background: rgba(255, 255, 255, 0.767);
+  		border-bottom: none;
+  		height: 55px;
+  		width: 100%;
+  		padding-right: 0px;
+  		box-shadow: 2px 1px 10px rgba(14, 13, 13, 0.288);
+  		z-index: 5;
+  		div {
+  			width: 300px;
+  			height: 65px;
+  			margin: auto;
+  			transform: translateX(-45%);
+  			background: rgba(255, 255, 255, 0.767);
+  			box-shadow: 2px 1px 10px rgba(14, 13, 13, 0.288);
+  			backdrop-filter: blur(1rem);
+  			padding-top: 0px;
+  			border-radius: 0px 0px 10px 10px;
+  			border: transparent;
+  			color: black;
+  			font-size: 24px;
+  			font-weight: 450;
+  			p {
+  				background: linear-gradient(to right top, #ff0d01, #ff0e01b4, #b700ffd5, #b700ff);
+  				background-clip: text;
+  				-webkit-text-fill-color: transparent;
+  			}
+  		}
+  	}
+  	#newJobButton {
+  		background-color: transparent;
+  	}
+  	#appContainer {
+  		background: none;	
+      
+  		.ant-layout-sider-light .ant-layout-sider-zero-width-trigger {		
+  			background: rgba(230, 22, 22, 0.212);
+  			top: 10px;
+  			z-index: 4;
+  			box-shadow: 2px 1px 5px rgba(14, 13, 13, 0.288);
+  			height: 36px;
+  			line-height: 36px;
+  			border-radius: 0 4px 4px 0;
+  		}
+  	}
+  	#componentContainer {
+  		background: none;
+  		//height: 100%;
+  		padding-top: 50px;
+  		padding-left: 50px;
+  		padding-right: 50px;
+  		overflow-y: auto;
+  	}
+  	#contentLayout {	
+  		background: none;	
+  	}
+  	#routesContainer {
+  		>div {
+  			margin-top: 5%;
+  		}
+  	}
+  	#menuHead {
+  		position: fixed;
+  		background: rgba(255, 255, 255, 0.555);
+  		border-bottom: none;
+  		height: 55px;
+  		width: 100%;
+  		padding: 0px;
+  		box-shadow: 2px 1px 10px rgba(14, 13, 13, 0.288);
+  		z-index: 10;
+  		margin: auto;
+  		display: flex;
+  
+  		#headerRow{
+  			width: 100%;
+  
+  			#pageTitle, #menuButtons{
+  				padding: 0px;
+  			}
+  		}
+  		// justify-content: space-between;
+  		//flex-flow: row nowrap;
+  		#ops {		
+  			background: linear-gradient(to top, red, red, #b700ff);
+  			box-shadow: 2px 1px 10px rgba(14, 13, 13, 0.288);
+  			backdrop-filter: blur(1rem);
+  			width: inherit;
+  			padding: 0px;
+  			border-radius: 0px 0px 10px 10px;
+  			border: transparent;
+  			color: white;
+  			font-size: 150%;
+  			font-weight: 350;
+      
+  		}
+  		.ant-menu-horizontal {
+  			line-height: 54px;			
+  			border-bottom: transparent;			
+  			background: transparent;
+      
+  			&:not(.ant-menu-dark) {
+  				>.ant-menu-item {
+  					color: #ff1818;				
+          
+  					&:hover {
+  						color: #ff1818;
+  						border-bottom: 2px solid #ff1818;
+  					}
+  				}
+  				>.ant-menu-submenu {
+  					&:hover {
+  						color: #ff1818;
+  						border-bottom: 2px solid #ff1818;
+  					}
+  				}
+  				>.ant-menu-item-active {
+  					color: #ff1818;
+  					border-bottom: 2px solid #ff1818;
+  				}
+  				>.ant-menu-submenu-active {
+  					color: #ff1818;
+  					border-bottom: 2px solid #ff1818;
+  				}
+  				>.ant-menu-item-open {
+  					color: #ff1818;
+  					border-bottom: 2px solid #ff1818;
+  				}
+  				>.ant-menu-submenu-open {
+  					color: #ff1818;
+  					border-bottom: 2px solid #ff1818;
+  				}
+  				>.ant-menu-item-selected {
+  					color: #ff1818;
+  					border-bottom: 2px solid #ff1818;
+  				}
+  				>.ant-menu-submenu-selected {
+  					color: #ff1818;
+  					border-bottom: 2px solid #ff1818;
+  				}
+  			}
+      
+  		}
+  		#configIcon {
+  			font-size: 20px;
+  		}
+  		#plusIcon {
+  			font-size: 20px;
+  		}
+  		#userIcon {
+  			font-size: 20px;
+  			font-weight: 550;
+  		}
+  	}
+  	#sider {
+  		height: 100vh;
+  		//overflow-y: auto;
+  		position: fixed;		
+  		background-color: white;
+  		border-right: 1px inverted rgba(128, 128, 128, 0.116);
+  		box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.027);
+  		z-index: 100;
+  		#modeChange {
+  			position: relative;
+  			width: 100%;
+  		}
+  		.logo#logo {
+  			height: 50px;
+  			margin-top: 10px;
+  			border-bottom: 1px inverted #363636;
+  			a {
+  				font-size: 14px;
+  				color: red;
+  			}
+  		}
+  		.ant-layout-sider-trigger {
+  			color: #f50707;
+  			background: rgba(255, 254, 254, 0.966);
+  		}
+  		.ant-menu-light {
+  			margin-top: 20px;
+  			.ant-menu-item {
+  				background: linear-gradient(to top, red, red, #b700ff);
+  				//border-bottom: 1px solid rgba(182, 178, 178, 0.247);
+  				background-clip: text;
+  				-webkit-text-fill-color: transparent;
+  				//margin-top: 30px;
+  				font-weight: 500;
+  				font-size: 16px;
+  				&:hover {
+  					color: #ff0a0a;
+  					background-color: transparent;
+  					>a {
+  						background: linear-gradient(to top, red, red, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  					>span {
+  						>a {
+  							background: linear-gradient(to top, red, red, #b700ff);
+  							background-clip: text;
+  							-webkit-text-fill-color: transparent;
+  						}
+  					}
+  				}
+  			}
+  			.ant-menu-submenu {
+  				background: linear-gradient(to top, red, red, #b700ff);
+  				background-clip: text;
+  				-webkit-text-fill-color: transparent;
+  				//margin-top: 30px;
+  				font-weight: 500;
+  				font-size: 16px;
+  			}
+  			.ant-menu-submenu-title {
+  				background: linear-gradient(to top, red, red, #b700ff);
+  				background-clip: text;
+  				-webkit-text-fill-color: transparent;
+  				//margin-top: 30px;
+  				//border-bottom: 1px solid rgba(182, 178, 178, 0.247);
+  				font-weight: 500;
+  				font-size: 16px;
+  				&:hover {
+  					color: #ff0a0a;
+  					background-color: transparent;
+  					>a {
+  						background: linear-gradient(to top, red, red, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  					>span {
+  						>a {
+  							background: linear-gradient(to top, red, red, #b700ff);
+  							background-clip: text;
+  							-webkit-text-fill-color: transparent;
+  						}
+  					}
+  				}
+  			}
+  			.ant-menu-item-active {
+  				color: #ff0a0a;
+  				background-color: transparent;
+  				>a {
+  					background: linear-gradient(to top, red, red, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  				}
+  				>span {
+  					>a {
+  						background: linear-gradient(to top, red, red, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  				}
+  			}
+  			.ant-menu-submenu-active {
+  				color: #ff0a0a;
+  				background-color: transparent;
+  				border-right: 3px solid red;
+  				>a {
+  					background: linear-gradient(to top, red, red, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  				}
+  				>span {
+  					>a {
+  						background: linear-gradient(to top, red, red, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  				}
+  			}
+  			.ant-menu-submenu-open {
+  				color: #ff0a0a;
+  				background-color: transparent;
+  				background: linear-gradient(to right, #f4f3f533, #fc1c103d);
+  				>a {
+  					background: linear-gradient(to top, red, red, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  				}
+  				>span {
+  					>a {
+  						background: linear-gradient(to top, red, red, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  				}
+  			}
+  			.ant-menu-submenu-selected {
+  				color: #ff0a0a;
+  				background-color: transparent;
+  				>a {
+  					background: linear-gradient(to top, red, red, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  				}
+  				>span {
+  					>a {
+  						background: linear-gradient(to top, red, red, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  				}
+  			}
+  			.ant-menu-item-selected {
+  				>a {
+  					background: linear-gradient(to top, red, red, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  				}
+  			}
+  		}
+  		#searchBar {
+  			background-color: rgba(248, 247, 247, 0.61);
+  			border-top: 1px solid #ff0a0a;
+  			border-bottom: 1px solid #ff0a0a;
+  			border-left: none;
+  			border-right: none;
+  		}
+  		.ant-input-search {
+  			>.ant-input-group {
+  				>.ant-input-group-addon {
+  					&:last-child {
+  						.ant-input-search-button {
+  							padding-top: 0;
+  							padding-bottom: 0;
+  							border-top: 1px solid #ff0a0a;
+  							border-bottom: 1px solid #ff0a0a;
+  							border-radius: 0 2px 2px 0;
+  							background-color: #b3aeae;
+  							color: #272626;
+  							height: 32px;
+  							&:hover {
+  								color: #a8a5a5;
+  							}
+  						}
+  					}
+  					.ant-input-search-button {
+  						border-radius: 0 0px 0px 0;
+  					}
+  				}
+  				margin-top: 10px;
+  				margin-bottom: 25px;
+  			}
+  			.ant-input {
+  				&:hover {
+  					border-color: #0c0c0c0a;
+  				}
+  				&:focus {
+  					border-color: #0c0c0c0a;
+  				}
+  			}
+  		}
+  		.ant-menu-light.ant-menu-light {
+  			&:not(.ant-menu-horizontal) {
+  				background-color: white;
+  				z-index: 8;
+  				.ant-menu-item {
+  					&:hover {
+  						border-right: 4px solid red;
+  						background: linear-gradient(to right, #f4f3f533, #fc1c103d);
+  					}
+  				}
+  				.ant-menu-item-selected {
+  					background: linear-gradient(to right top, #ff0d01, #ff0e01b4, #b700ffd5, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  				}
+  			}
+  		}
+  		.ant-switch {
+  			background-color: rgba(255, 255, 255, 0.767);
+  			border: 1px solid red;
+  		}
+  		.ant-switch-inner {
+  			color: rgba(19, 18, 18, 0.85);
+  			background-color: rgba(255, 255, 255, 0.767);
+  		}
+  		.ant-switch-checked {
+  			.ant-switch-inner {
+  				background-color: #fafafa;
+  				font-size: 10px;
+  			}
+  		}
+  		.ant-switch-handle {
+  			&::before {
+  				background-color: rgba(245, 11, 11, 0.233);
+  				border: 1px solid red;
+  			}
+  		}
+  	}
+  	#config {
+  		margin-top:50px;
+  		#configButtons {
+  			width: inherit;
+  			height: 200px;
+  			display: flex;
+  			padding: 0px;
+  			flex-flow: column;
+  			flex-grow: 1;
+  			justify-content: space-evenly;
+  			align-items: center;
+  			background: rgba(255, 2, 2, 0.062);
+  			backdrop-filter: blur(4rem);
+  			box-shadow: 2px 1px 8px rgba(14, 13, 13, 0.055);
+  			//margin-left: 80%;
+  			border-radius: 8px;
+  		}
+  		#opsButton {
+  			margin-top: 5px;
+  			margin-bottom: 1px;
+  			padding: 2px;
+  		}
+  		#button {
+  			padding: 1px 14px;
+  			margin-bottom: 5%;
+  			width: 100%;
+  			background-color: #ffffff;
+  			color: #f00404;
+  			border: 1px solid red;
+  			font-weight: 200;
+  			&:hover {
+  				background-color: #b89b9b;
+  				color: #080606;
+  			}
+  		}
+  		.ant-card {
+  			font-size: 14px;
+  			font-variant: tabular-nums;
+  			line-height: 1.5715;
+  			background: rgba(255, 255, 255, 0.568);
+  			backdrop-filter: blur(1rem);
+  			border-radius: 8px;
+  			border: 0px;
+  			border-width: 2px;
+  			height: 300px;
+  			box-shadow: 1px 2px 6px rgba(32, 32, 32, 0.226);
+  			z-index: 3;
+  		}
+  		.ant-card-head {
+  			color: #0a0909;
+  			border: none;
+  			border-top-left-radius: 8px;
+  			border-top-right-radius: 8px;
+  			background-color: transparent;
+  			font-weight: 400;
+  			font-size: 18px;
+  		}
+  		#saveButton {
+  			background-color: #b89b9b;
+  			color: #080606;
+  			border: 1px solid red;
+  			font-weight: 200;
+  		}
+  	}
+  	#networkPg {
+  		.ant-tabs-top {
+  			>.ant-tabs-nav {
+  				margin: 0 0 24px 0;
+  			}
+  			>div {
+  				>.ant-tabs-nav {
+  					margin: 0 0 24px 0;
+  				}
+  			}
+  		}
+  		.ant-tabs-bottom {
+  			>.ant-tabs-nav {
+  				margin: 0 0 24px 0;
+  			}
+  			>div {
+  				>.ant-tabs-nav {
+  					margin: 0 0 24px 0;
+  				}
+  			}
+  		}
+  		.card-container {
+  			p {
+  				margin: 0;
+  			}
+  			>.ant-tabs-card {
+  				.ant-tabs-content {
+  					height: 92vh;
+  					>.ant-tabs-tabpane {
+  						padding: 16px;
+  						background: #7e7d7dfb;
+  						color: #0c0c0c;
+  					}
+  				}
+  				>.ant-tabs-nav {
+  					&::before {
+  						display: none;
+  					}
+  				}
+  				.ant-tabs-tab {
+  					border-color: transparent;
+  					background: transparent;
+  					color: #fff;
+  				}
+  				.ant-tabs-tab-active {
+  					background: #fffffffb;
+  				}
+  			}
+  		}
+  	}
+  	#Notifs {
+  		.ant-alert {
+  			margin-bottom: 24px;
+  			color: rgba(0, 0, 0, 0.85);
+  			font-size: 14px;
+  			border-radius: 8px;
+  		}
+  		.ant-card {
+  			margin-top: 65px;
+  			font-size: 14px;
+  			font-variant: tabular-nums;
+  			line-height: 1.5715;
+  			background: rgba(253, 252, 252, 0.342);
+  			box-shadow: 1px 2px 8px 0 rgba(31, 30, 30, 0.253);
+  			backdrop-filter: blur(2rem);
+  			z-index: 2;
+  			border-radius: 8px;
+  			border: none;
+  			border-width: 2px;
+  		}
+  		.ant-card-head {
+  			color: #0a0a0a;
+  			border-bottom: none;
+  			font-weight: 400;
+  			font-size: 18px;
+  		}
+  		.ant-alert-success {
+  			background-color: #e4f8d1bb;
+  			border: 1px solid #b7eb8f;
+  			color: #036931;
+  		}
+  		.ant-alert-info {
+  			background-color: #cbebfaa9;
+  			border: 1px solid #91d5ff;
+  			color: #064268;
+  		}
+  		.ant-alert-warning {
+  			background-color: #fceb989c;
+  			border: 1px solid #ffe58f;
+  			color: #3a3902;
+  		}
+  		.ant-alert-error {
+  			background-color: #f8ada19a;
+  			border: 1px solid #f89289;
+  			color: #3f0c03;
+  		}
+  		#popConfirm {
+  			background-color: rgba(53, 52, 54, 0.829);
+  			color: blanchedalmond;
+  		}
+  		#notifButton {
+        
+  			background-color: #f8f6f6;
+  			color: #f00404;
+  			border: 1px solid red;
+  			font-weight: 200;
+  			&:hover {
+  				background-color: #f0c5c5;
+  				color: #110f0f;
+  			}
+  		}
+  	}
+  	#operation {
+  		.ant-card {
+  			margin-bottom: 50px;
+  		}
+  		.ant-card#attachments {
+  			background-color: rgba(67, 67, 68, 0.877);
+  			color: cornflowerblue;
+  		}
+  		#tableCol {
+  			//width: inherit;
+  			.ant-table {
+  				color: #111;
+  				font-variant: tabular-nums;
+  				background-color: transparent;			
+  				border-radius: 0px;
+  			}
+  			.ant-table-thead {
+  				>tr {
+  					>th {
+  						padding-left: 35px;
+  						color: rgba(238, 95, 95, 0.945);
+  						font-weight: 400;
+  						font-size: 18px;
+  						background: transparent;
+  						border-bottom: 1px solid rgba(212, 10, 10, 0.082);
+  					}
+  				}
+  			}
+  			.ant-table-tbody {
+  				>tr {
+  					>td {
+  						padding-left: 35px;
+  						border-bottom: 1px solid rgba(212, 10, 10, 0.082);
+  						background: rgba(247, 246, 246, 0.671);
+  						color: #141414;
+  						font-size: 16px;
+  					}
+  				}
+  				>tr.ant-table-row {
+  					&:hover {
+  						>td {
+  							background: #f04b4b21;
+  						}
+  					}
+  				}
+  			}
+  		}
+  		.ant-pagination-item {
+  			background-color: #fdfcfc;
+  			border: 1px inverted red;
+  			a {
+  				color: red;
+  			}
+  		}
+  		.ant-pagination-prev {
+  			.ant-pagination-item-link {
+  				color: #795353;
+  				background-color: #b3b1b1;
+  				border: 1px solid #462a2a;
+  				border-radius: 2px;
+  			}
+  		}
+  		.ant-pagination-next {
+  			.ant-pagination-item-link {
+  				color: #795353;
+  				background-color: #b3b1b1;
+  				border: 1px solid #462a2a;
+  				border-radius: 2px;
+  			}
+  		}
+  		.ant-pagination-disabled {
+  			&:hover {
+  				.ant-pagination-item-link {
+  					color: rgba(156, 97, 97, 0.521);
+  					border-color: #d9d9d9;
+  					cursor: not-allowed;
+  				}
+  			}
+  			&:focus {
+  				.ant-pagination-item-link {
+  					color: rgba(156, 97, 97, 0.521);
+  					border-color: #d9d9d9;
+  					cursor: not-allowed;
+  				}
+  			}
+  		}
+  		#settingsIcon {
+  			font-size: large;
+  		}
+  		#subJobs {
+  			#subJobMain {			
+  				margin-top: 50px;
+  				box-shadow: 1px 2px 8px 0 rgba(31, 30, 30, 0.253);
+  				z-index: 2;
+  			}
+  			.ant-card {	
+            
+  				font-size: 14px;
+  				font-variant: tabular-nums;
+  				line-height: 1.5715;
+  				background: rgba(253, 252, 252, 0.342);
+  				backdrop-filter: blur(2rem);
+  				border-radius: 8px;
+  				border: 0px;
+  				border-width: 2px;
+  			}
+  			.ant-card-head {
+  				color: #111;
+  				border: none;
+  				border-top-left-radius: 8px;
+  				border-top-right-radius: 8px;
+  				background-color: transparent;
+  				font-weight: 380;
+  				font-size: 22px;
+  			}
+  			.ant-card-body {
+  				padding-left: 0%;
+  				padding-right: 0%;
+  			}
+  			#moreDeets {
+  				font-size: 30px;
+  			}
+  			#buttons {
+  				margin-left: 46%;
+  			}
+  
+        
+  			#cancelButton, #detailsButton {
+  				margin-top: 30px;
+  				background-color: rgba(255, 255, 255, 0.767);
+  				color: #f00404;
+  				border: 1px solid rgba(255, 0, 0, 0.199);
+  				&:hover {
+  					background-color: #ccb5b5;
+  					color: rgba(46, 41, 41, 0.986);
+  				}
+  			}
+        
+  			#actionButton {
+  				background-color: rgba(255, 255, 255, 0.767);
+  				color: #f00404;
+  				border: 1px solid rgba(255, 0, 0, 0.199);
+  				&:hover {
+  					background-color: #ccb5b5;
+  					color: rgba(46, 41, 41, 0.986);
+  				}
+  			}
+  
+  			#searchButton {
+  				background-color: transparent;
+  				color: #f00404;
+  				border: none;
+  				margin-left: 3px;
+          
+  				// #searchIcon{
+  				// 	font-size: small;
+  				// }				
+  				&:hover {
+  					background-color: transparent;
+  					color: rgba(8, 8, 8, 0.986);
+  				}
+          
+  			}
+  			#auditIcon {
+  				margin-right: 10px;
+  			}
+  			#modButton {
+  				margin-top: 10px;
+  				margin-right: 30px;
+  				background-color: #f8f5f5;
+  				color: #f00404;
+  				border: 1px solid red;
+  				&:hover {
+  					background-color: #c29898;
+  					color: #464444;
+  				}
+  			}
+  			#tagCol{
+  				margin-right: 10px;
+  			}
+  			#itemLogsLink {
+          
+  				color: red;
+  				font-size: 14px;
+  				font-weight: 550;
+  				&:hover {
+  					background: linear-gradient(to right top, #ff0d01, #ff0e01b4, #b700ffd5, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  					font-size: 14px;
+  					font-weight: 650;
+  				}
+  			}
+  		}
+  	}
+  	#popLink {
+  		.ant-card#wrapperCard {
+  			margin-top: 65px;
+  			font-size: 14px;
+  			font-variant: tabular-nums;
+  			line-height: 1.5715;
+  			background: rgba(255, 254, 254, 0.247);
+  			backdrop-filter: blur(1rem);
+  			border-radius: 8px;
+  			border: 0px;
+  			border-width: 2px;
+  			box-shadow: 1px 2px 8px rgba(29, 29, 29, 0.212);
+  			z-index: 3;
+  		}
+  		#wrapperCard {
+  			.ant-card-head {
+  				// color: #0f0f0f;
+  				border: none;
+  				border-top-left-radius: 8px;
+  				border-top-right-radius: 8px;
+  				background-color: transparent;
+  				font-weight: 400;
+  				font-size: 18px;
+  			}
+  		}
+  		.ant-card#AppCard {
+  			background: rgba(255, 255, 255, 0.466);
+  			backdrop-filter: blur(1rem);
+  			border: 1px solid rgba(255, 0, 0, 0.199);
+  			border-radius: 8px;
+  			margin-bottom: 30px;
+  			#popLinksLink {
+  				>a {
+  					font-weight: 550;
+  					font-size: 150%;
+  					background: linear-gradient(to right top, #ff0d01, #ff0e01b4, #b700ffd5, #b700ff);
+  					background-clip: text;
+  					-webkit-text-fill-color: transparent;
+  					&:hover {
+  						font-weight: 550;
+  						font-size: 152%;
+  						background: linear-gradient(to right top, #ff0d01, #ff0e01b4, #b700ffd5, #b700ff);
+  						background-clip: text;
+  						-webkit-text-fill-color: transparent;
+  					}
+  				}
+  			}
+  		}
+  	}
+}

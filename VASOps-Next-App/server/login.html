@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <form ref='login' 
+      id='login' 
+      action='http://localhost:5000/login?' 
+      method='post' 
+      encType="multipart/form-data">
+       <h1> VasOps Login</h1>
+        <br/> 
+        <br/> 
+        <label for="Username">User Name:</label>
+        <input id= 'username' type = 'text' name="userid"/>
+        <br/> 
+        <br/> 
+        <label for="paswword">Password:</label>
+        <input id="password" type = 'text' name="pwd"/>
+        <br/> 
+        <button id= 'submitbtn' onclick="onSubmit()" type="submit">Login</button>
+    </form>   
+  </body>
+
+  <script>
+      function onSubmit(){
+        console.log("The redirect");
+        window.location.href = 'http://localhost:5500/server/login.html';
+      }  
+  </script>
+</html>

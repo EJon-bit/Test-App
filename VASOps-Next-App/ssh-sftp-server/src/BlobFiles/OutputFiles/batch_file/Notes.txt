@@ -1,0 +1,30 @@
+CLOUD COMPUTING-
+
+The process of Delivering IT resources thorugh the internet on Demand with Pay as you go pricing
+
+Uses -
+Data Backup
+Virtual Desktop
+Software Dev and testing
+Data Analytics
+	
+	
+Advantages
+	Avoid having to buy, maintain, replace expand physical Server Networks
+	
+	Makes Scaling Easy
+
+	Cloud Services has infrastructure widely distributed around the world allowing users to deploy apps to multiple locations thus significantly reducing latency experienced by end users. 
+
+
+Infrastructure as a Service (IaaS)-- 
+	Gives all the right ingredients (Physical Materials) to do utilise cloud services 
+		
+	makes Data Backup and Distaster recovery easier
+	
+Platform as a Service-  Customer is Only Responsible for the basics. Think Delivery Service for Pizza (No config at all necessary)
+
+
+Software as a Service- Every thing is Ready made- Think Dining in at a Pizza
+Place
+

@@ -1,0 +1,25 @@
+{
+  "name": "wrapper-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wrapperServer.js",
+  "scripts": {
+    "start": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && nodemon ./src/bin/www"
+  },
+  "author": "Vas team",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "imap": "^0.8.19",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^3.0.0",
+    "nodemailer": "^6.6.5",
+    "nodemon": "^2.0.6",
+    "winston": "^3.3.3",
+    "xoauth2": "^1.2.0"
+  }
+}

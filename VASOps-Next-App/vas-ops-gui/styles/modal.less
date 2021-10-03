@@ -1,0 +1,182 @@
+.ant-modal-mask {    
+    background-color: rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(0.2rem);
+}
+
+.ant-modal-content {
+    position: relative;
+    background-color:rgba(255, 255, 255, 0.993);
+    backdrop-filter: blur(1rem);
+    background-clip:unset;
+    border: 0;
+    border-radius: 10px;
+    
+  }
+
+.ant-modal-body {
+    padding: 0px;
+    font-size: 14px;
+    line-height: 1.5715;
+    word-wrap: break-word;
+}
+
+.ant-modal-title {
+    margin: 0;
+    color: rgba(247, 10, 10, 0.85);
+    text-align: center;
+    font-weight: 450;
+    font-size: 18px;
+    line-height: 22px;
+    word-wrap: break-word;
+}
+
+.ant-modal-header {    
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+#generalAudits{
+    background: linear-gradient(to right, red, red,#b700ff);
+    .ant-table {
+        color: #111;
+        font-variant: tabular-nums;
+        background-color: transparent;			
+        border-radius: 0px;
+        //margin-bottom: 20px;
+    }
+    .ant-table-thead {
+        >tr {
+            >th {
+               // padding-left: 40px;
+                padding-top:10px;
+                padding-bottom: 5px;
+                color: rgba(15, 13, 13, 0.945);
+                font-weight: 400;
+                font-size: 18px;
+                background: white;            
+                border-bottom: 1px solid rgba(212, 10, 10, 0.082);
+                height: 25px;
+            }
+        }
+    }
+    .ant-table-tbody {
+        >tr {
+            >td {
+               // padding-left: -40px;
+                border-bottom: 1px solid rgba(212, 10, 10, 0.082);
+                background: rgba(247, 246, 246, 0.952);
+                color: #df4343;
+                font-size: 16px;
+                font-weight: 350;
+            }
+        }
+        >tr.ant-table-row {
+            &:hover {
+                >td {
+                    background: #f04b4b21;
+                    color: white;
+                    font-weight: 450;
+                }
+            }
+        }
+    }
+    tr.ant-table-expanded-row {
+        >td {
+            background: rgba(255, 255, 255, 0.966);
+            backdrop-filter: blur(2rem);
+            padding: 60px;
+           
+        }
+    }
+    .ant-table-row-expand-icon {
+        color: #ff1824;
+        position: relative;
+        background: white;
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+}
+
+#jobAudits{   
+   
+    .ant-table {
+        color: #111;
+        font-variant: tabular-nums;
+        background-color: transparent;		
+        box-shadow: -2px 1px 5px rgba(31, 20, 20, 0.829);
+        //margin-bottom: 20px;
+    }
+    .ant-table-thead {
+        >tr {
+            >th {
+               // padding-left: 40px;
+                padding-top:10px;
+                padding-bottom: 5px;
+                color: rgba(15, 13, 13, 0.945);
+                font-weight: 500;
+                font-size: 14px;
+                background: rgba(250, 0, 0, 0.219);            
+                border:none;
+                height: 25px;
+            }
+        }
+    }
+    .ant-table-tbody {
+        >tr {
+            >td {
+               // padding-left: -40px;
+                border: none; 
+                border-radius: 4px;
+                background: rgb(255, 255, 255);
+                color: #df4343;
+                font-size: 14px;
+                font-weight: 350;
+            }
+        }
+        >tr.ant-table-row {
+            &:hover {
+                >td {
+                    background: #f04b4b21;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+
+#searchButton {
+    background-color: transparent;
+    color: #f00404;
+    border: none;
+    margin-left: 3px;
+    box-shadow: none;
+    
+    // #searchIcon{
+    // 	font-size: small;
+    // }				
+    &:hover {
+        background-color: transparent;
+        color: rgba(8, 8, 8, 0.986);
+    }
+    
+}
+
+#auditIcon {
+    margin-right: 10px;
+}
+
+#itemLogsLink {
+				
+    color: red;
+    font-size: 14px;
+    font-weight: 550;
+    &:hover {
+        background: linear-gradient(to right top, #ff0d01, #ff0e01b4, #b700ffd5, #b700ff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 14px;
+        font-weight: 650;
+    }
+}

@@ -1,0 +1,279 @@
+GET http://localhost:5000/itemOperation
+
+###
+
+GET http://localhost:5000/itemOperation/opType/localhost:5000/itemOperation/opType/SubscriberDisconnects
+
+###
+
+GET http://localhost:5000/itemOperation/5a81522e-3609-4791-8303-b47e31cc211f
+
+###
+
+POST http://localhost:5000/itemOperation/addItem
+content-type: application/json
+
+{
+  "name": "Subscriber",
+  "comments": "This tests",
+  "source": "VAS",
+  "operationType": "AUC Loading",
+  "schedule_date_time": "Mon Mar 22 2021 13:48:00 GMT-0500 (Eastern Standard Time)"
+  
+}
+
+###
+
+DELETE http://localhost:3000/itemOperation/033d48f0-a3c8-4ad6-82eb-9b06fc5543e4
+
+###
+
+PATCH http://localhost:5000/settingOperation/pop
+content-type: application/json
+
+{
+  "id": "popLink"
+}
+
+###
+
+PUT http://localhost:3000/itemOperation/033d48f0-a3c8-4ad6-82eb-9b06fc5543e4
+content-type : application/json
+
+
+
+###
+GET  http://localhost:5000/settingOperation/
+
+###
+POST http://localhost:5000/settingOperation/addSetting
+content-type: application/json
+
+{
+    "type": "populare_links",
+    "updatedAt": "Tue Jan 26 2021 12:19:37 GMT-0500 (Eastern Standard Time)",
+    "data": [
+        {
+            "name": "Service Desk",
+            "link": "https://servicedesk.digicelgroup.com/app/servicedesk/HomePage.do",
+            "icon": "../Images/PopLinksIcons/serviceDesk.png"
+        },
+        {
+            "name": "MINSAT",
+            "link": "http://172.16.244.18:10000/",
+            "icon": "../Images/PopLinksIcons/minsatIcon.png"
+        },
+        {
+            "name": "Production EMA- GUI",
+            "link": "http://172.16.146.52:3080/",
+            "icon": "../Images/PopLinksIcons/EMA.jpg"
+        },
+        {
+            "name": "Splunk",
+            "link": "https://splunkjm:8000/en-US/account/login?return_to=%2Fen-US%2F",
+            "icon": "../Images/PopLinksIcons/splunk_logo.png"
+        },
+        {
+            "name": "Sharepoint",
+            "link": "https://digicelja-my.sharepoint.com/",
+            "icon": "../Images/PopLinksIcons/SharepointIcon.png"
+        },
+        {
+            "name": "CC Portal",
+            "link": "https://digicelja-my.sharepoint.com/",
+            "icon": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fyt3.ggpht.com%2Fytc%2FAAUvwnhEvcqvrxHv9WBTw0l43XAUoq2-uEf_VmXxNQDr-A%3Ds900-c-k-c0x00ffffff-no-rj&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fuser%2FYouTube&tbnid=G5nV-EyGwFRDsM&vet=12ahUKEwjz8I_m3NruAhXKVt8KHd4jBqYQMygAegUIARDRAQ..i&docid=zzZ1qFbhNELZPM&w=900&h=900&q=youtube&ved=2ahUKEwjz8I_m3NruAhXKVt8KHd4jBqYQMygAegUIARDRAQ"
+        },
+        {
+            "name": "CAIN",
+            "link": "https://digicelja-my.sharepoint.com/",
+            "icon": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fyt3.ggpht.com%2Fytc%2FAAUvwnhEvcqvrxHv9WBTw0l43XAUoq2-uEf_VmXxNQDr-A%3Ds900-c-k-c0x00ffffff-no-rj&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fuser%2FYouTube&tbnid=G5nV-EyGwFRDsM&vet=12ahUKEwjz8I_m3NruAhXKVt8KHd4jBqYQMygAegUIARDRAQ..i&docid=zzZ1qFbhNELZPM&w=900&h=900&q=youtube&ved=2ahUKEwjz8I_m3NruAhXKVt8KHd4jBqYQMygAegUIARDRAQ"
+        }
+    ]
+}
+
+###
+
+##
+POST http://localhost:5000/settingOperation/addSetting
+content-type: application/json
+{
+    "type": "popular_links",
+    "updatedAt": "Tue Jan 26 2021 12:19:37 GMT-0500 (Eastern Standard Time)",
+    "data": [
+        "name":"Subscriber Con/Discon Model",
+        "description":"This model defines the procedure for adding/removing subscribers from network systems (i.e. HLR, SDP, AF, AUC, SMS). The steps are: 1",
+        "endpoint":"xyz"
+    ]
+}
+
+POST http://localhost:5000/settingOperation/
+content-type: application/json
+
+{
+  "type": "operations_processes",
+    "updatedAt": "Tue Jan 26 2021 12:26:14 GMT-0500 (Eastern Standard Time)",
+    "data": [
+        {
+            "name": "Subscriber Loading",
+            "id": "subscriber_loading",
+            "request_template": {
+                "request_statuses": {
+                    "default": "Submitted",
+                    "statuses": [
+                        "Submitted",
+                        "Processing",
+                        "Completed"
+                    ]
+                },
+                "request_attachments": [
+                    {
+                        "required": true,
+                        "id": "subscriber_file",
+                        "type": "input",
+                        "name": "Subscriber File"
+                    },
+                    {
+                        "required": true,
+                        "id": "result_file",
+                        "type": "output",
+                        "name": "Result File"
+                    }
+                ]
+            },
+            "description": "Loads subscribers to core network and charging system pairing msdn with ismi along with other parameters"
+        },
+        {
+            "name": "AUC Loading",
+            "id": "auc_loading",
+            "request_template": {
+                "request_statuses": {
+                    "default": "Submitted",
+                    "statuses": [
+                        "Submitted",
+                        "Processing",
+                        "Completed"
+                    ]
+                },
+                "request_attachments": [
+                    {
+                        "required": true,
+                        "id": "auc_file",
+                        "type": "input",
+                        "name": "AUC File"
+                    },
+                    {
+                        "required": true,
+                        "id": "result_file",
+                        "type": "output",
+                        "name": "Result File"
+                    }
+                ]
+            },
+            "description": "Loads authentication data for sims to HLR/AUC"
+        },
+        {
+            "name": "SNMP Traps",
+            "id": "snmp_traps",
+            "request_template": {
+                "request_statuses": {
+                    "default": "Active",
+                    "statuses": [
+                        "Active",
+                        "Acknowledge",
+                        "Ceased"
+                    ]
+                },
+                "request_properties": [
+                    {
+                        "name": "first_raised_time",
+                        "required": true
+                    },
+                    {
+                        "name": "cause",
+                        "required": true
+                    },
+                    {
+                        "name": "details",
+                        "required": false
+                    },
+                    {
+                        "name": "oid",
+                        "required": true
+                    }
+                ]
+            },
+            "description": "SNMP "
+        }
+    ]
+}
+###
+
+###
+POST http://localhost:5000/settingOperation/addSetting
+content-type: application/json
+
+{
+    "type": "modules",
+    "data": [
+        {
+            "name": "SSH/SFTP Requests",
+            "description": "List of hosts and associated data for SNMP targets",
+            "target":[
+                {
+                    "name": "Lab Ema",
+                    "host": "172.178.2.9",
+                    "username": "sogadm",
+                    "password": "sogadm"
+                }
+            ] 
+        }
+    ]
+}
+
+###
+POST http://localhost:5000/sshReq/af88f271-7999-46bc-8489-3ceead2bd220
+content-type: application/json
+
+{
+    "host": "172.16.245.84",
+    "name": "SSH/SFTP Requests",
+    "command": "./testscript.sh"
+    
+}
+    
+###
+POST http://localhost:5000/sftpReq/af88f271-7999-46bc-8489-3ceead2bd220
+content-type: application/json
+
+{
+    "host": "172.16.245.84",
+    "name": "SSH/SFTP Requests"
+}
+    
+###
+POST http://localhost:5000/createUser
+content-type: application/json
+
+{
+    "userId": "systemuser01",
+    "password":"systemuser01" 
+
+}
+
+
+###
+POST http://localhost:5000/logOperation/addLog
+content-type: application/json
+
+{
+    "user_id": "VasUser",
+    "log_data": [
+        # "affected_systems":["Database", "Blob"],
+        # "action":{
+        #     "action_type":"Create",
+        #     "document_created":{
+                
+        #     }
+        # }
+    ]
+}

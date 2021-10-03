@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <form ref='file' 
+      id='file' 
+      action='http://localhost:5000/itemOperation/addItem' 
+      method='post' 
+      encType="multipart/form-data">
+       <h1> VasOps</h1>
+        <br/> 
+        <br/> 
+        <label for="name">Job Name:</label>
+        <input id= 'name' type = 'text' name="name"/>
+        <br/> 
+        <br/> 
+        <label for="source">Source:</label>
+        <input id="source" type = 'text' name="source"/>
+        <br/> 
+        <br/>
+        <label for="comment">Comment:</label>
+        <input id="comment" type = 'text' name="comment"/>
+        <br/> 
+        <br/> 
+        <label for="opType">Operations Type:</label>
+        <input id= "opType" type = 'text' name="operations_type"/>
+        <br/> 
+        <br/>
+        <input id="myFiles" type="file" multiple name="attachment" />
+        <br/> 
+        <br/>
+        <input type='submit' value='Submit & Upload!' />
+    </form>   
+  </body>
+
+  <script>
+    const getFiles=()=>{
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
+      console.log("The files is,", files);
+    }
+
+    document.querySelector("#myfiles").onchange=getFiles;
+  </script>
+</html>
